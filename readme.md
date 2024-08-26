@@ -12,6 +12,8 @@ Make example for this keyboard (after setting up your build environment):
 
     make handwired/cornewing:default
 
+    qmk compile -kb handwired/cornewing -km default  
+
 Flashing example for this keyboard:
 
     make handwired/cornewing:default:flash

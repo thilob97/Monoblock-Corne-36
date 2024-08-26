@@ -27,7 +27,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * |  Z   |  X   |  C   |  V   |  B   |           |  N   |  M   |  ,   |  .   |  /   |
  * `----------------------------------'           `----------------------------------'
  *                  ,--------------------.    ,--------------------.
- *                  | ESCAPE | LOWER| Space|    | Enter| RAISE| Shift| 
+ *                  | ESCAPE | LOWER| Space|    | Enter| RAISE| Shift|
  *                  `--------------------'    `--------------------.
  */
 [_QWERTY] = LAYOUT_split_3x5_3(
@@ -45,7 +45,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * |------+------+------+------+------|           |------+------+------+------+------|
  * |  Tab | Left | Down |  Up  | Right|           |    (  |  )  |   &  |   [  |   ]  |
  * |------+------+------+------+------|           |------+------+------+------+------|
- * |  =   |   <  |  > |  Alt |   $   |           |    {  |  }  |   |  |   "  |   '  |
+ * |  =   |   SPACE  |  X |  C |   V   |           |    {  |  }  |   |  |   "  |   '  |
  * `----------------------------------'           `----------------------------------'
  *                  ,--------------------.    ,--------------------.
  *                  |COMMAND| LOWER|BACKSPACE|    |      | RAISE|      |
@@ -54,7 +54,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 [_RAISE] = LAYOUT_split_3x5_3(
   KC_1,    KC_2,    KC_3,    KC_4,    KC_5,         KC_6,    KC_7,    KC_8,    KC_9,    KC_0,
   KC_TAB,    KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT,      KC_LPRN, KC_RPRN, KC_AMPR,  KC_LBRC, KC_RBRC,
-  KC_EQL, KC_LT,  KC_GT, KC_LALT, KC_DLR,      KC_LCBR, KC_RCBR, KC_PIPE, KC_DQT,  KC_QUOT,
+  KC_EQL,  KC_X, KC_C, KC_V, KC_SPACE      KC_LCBR, KC_RCBR, KC_PIPE, KC_DQT,  KC_QUOT,
                     KC_LCMD, _______, KC_BACKSPACE,      _______, _______, _______
 ),
 

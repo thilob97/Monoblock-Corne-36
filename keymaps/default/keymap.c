@@ -3,13 +3,13 @@
 // Defines names for use in layer keycodes and the keymap
 enum layer_names {
     _QWERTY,
-    _LAYER1,
+    _RASIE,
     _LOWER,
     _ADJUST
 };
 
-#define LAYER1 MO(_LAYER_1)
-#define LOWER MO(_RAISE)
+#define RAISE MO(_RAISE)
+#define LOWER MO(_LOWER)
 #define ADJUST MO(_ADJUST)
 
 // Defines for task manager and such
@@ -44,21 +44,21 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 /* layer1
  *
  * ,----------------------------------.           ,----------------------------------.
- * |   1  |   2  |   3  |   4  |   5  |           |   6  |   7  |   8  |   9  |   0  |
+ * |   1  |   2  |  3   |   /  |   \  |           |   !  |   ?  |   @  |   $  |   %  |
  * |------+------+------+------+------|           |------+------+------+------+------|
- * |  Tab | Left | Down |  Up  | Right|           |    (  |  )  |   &  |   [  |   ]  |
+ * |  4   |   5  |  6   |   =  |   -  |           |    (  |  )  |   &  |   [  |   ]  |
  * |------+------+------+------+------|           |------+------+------+------+------|
- * |  :  |  SPACE |  X |  C |   V     |           |    {  |  }  |   |  |   "  |   '  |
+ * |  7   |   8  |  9   |   #  |   +  |           |    {  |  }  |   |  |   "  |   '  |
  * `----------------------------------'           `----------------------------------'
  *                  ,--------------------.    ,--------------------.
  *                | ESC |COMMAND| BACKSPACE| |      | RAISE|      |
  *                  `--------------------'    `--------------------.
  */
-[_LAYER1] = LAYOUT_split_3x5_3(
-  KC_1,     KC_2,    KC_3,      KC_4,           KC_5,               KC_6,       KC_7,       KC_8,       KC_9,       KC_0,
-  KC_TAB,   KC_LEFT, KC_DOWN,   KC_UP,          KC_RGHT,            KC_LPRN,    KC_RPRN,    KC_AMPR,    KC_LBRC,    KC_RBRC,
-  KC_COLON, KC_SPC,  KC_X,      KC_C,           KC_V,               KC_LCBR,    KC_RCBR,    KC_PIPE,    KC_DQT,     KC_QUOT,
-                     KC_ESC,    KC_LCMD,        KC_BACKSPACE,       _______,    RAISE,      _______
+[_RAISE] = LAYOUT_split_3x5_3(
+  KC_1,     KC_2,   KC_3,       -------,       -------,                 -------,    -------,    -------,    -------,    -------,
+  KC_4,     KC_5,   KC_6,       -------,       -------,                 KC_LPRN,    KC_RPRN,    KC_AMPR,    KC_LBRC,    KC_RBRC,
+  KC_7,     KC_8,   KC_9,       -------,       -------,                 KC_LCBR,    KC_RCBR,    KC_PIPE,    KC_DQT,     KC_QUOT,
+                    KC_ESC,     KC_LCMD,    KC_BACKSPACE,               _______,    RAISE,      _______
 ),
 
 /* Lower
